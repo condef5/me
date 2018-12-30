@@ -29,7 +29,7 @@ const Wrap = styled('div')`
     color: cyan;
   }
   span {
-    font-weight: 500;
+    font-weight: 700;
   }
   height: 100%;
 `
