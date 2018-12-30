@@ -5,21 +5,26 @@ import Me from '../components/Me'
 import styled from '@emotion/styled'
 
 const Wrap = styled('div')`
-  max-width: 550px;
   margin: auto;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 200;
   font-size: 18px;
   .list {
     text-align: left;
-    padding-left: 2.5em;
     & > div {
       margin-top: 10px;
     }
   }
+  @media (min-width: 700px) {
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .list {
+      padding-left: 2.5em;
+    }
+  }
+
   a {
     color: cyan;
   }

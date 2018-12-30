@@ -5,15 +5,21 @@ import styled from '@emotion/styled'
 const Sidebar = styled('div')`
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('http://i.imgur.com/AfE1ZFl.png');
+  background-image: url('bg.png');
   align-items: center;
   color: #fff;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  width: 5%;
-  min-width: 70px;
+  padding: 7.5px;
+  flex-wrap: wrap;
+  @media (min-width: 500px) {
+    flex-direction: column;
+    min-width: 70px;
+    width: 5%;
+  }
   a {
+    /* min-width: 70px; */
+    padding: 5px;
     box-shadow: none;
     font-weight: bold;
     color: inherit;

@@ -6,16 +6,21 @@ import styled from '@emotion/styled'
 import Sidebar from './Sidebar'
 
 const Wrapper = styled('div')`
-  display: flex;
-  width: 100%;
-  height: 100vh;
+  @media (min-width: 500px) {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
 `
 
 const Content = styled('div')`
-  padding: 1.5em 60px;
-  width: 95%;
-  max-height: 100vh;
-  overflow: auto;
+  padding: 1em 10px;
+  @media (min-width: 500px) {
+    padding: 1.5em 60px;
+    width: 95%;
+    overflow: auto;
+    max-height: 100vh;
+  }
   &.home {
     background: linear-gradient(rgb(11, 12, 26), rgb(19, 20, 22));
     transition: all 0.3s;
