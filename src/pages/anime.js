@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { css } from '@emotion/core'
-import { rhythm } from '../utils/typography'
 import Layout from '../components/Layout'
 
 export default ({ data }) => {
@@ -15,7 +14,7 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          My favorite Animes
+          Lista de animes
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -27,11 +26,7 @@ export default ({ data }) => {
                 color: inherit;
               `}
             >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
+              <h3>
                 {node.frontmatter.title}{' '}
                 <span
                   css={css`

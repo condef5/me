@@ -18,6 +18,7 @@ const Sidebar = styled('div')`
     font-weight: bold;
     color: inherit;
     transition: all 0.3s;
+    text-decoration: none;
     &:hover {
       box-shadow: 0 1px 0 0 currentColor;
     }

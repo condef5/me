@@ -12,7 +12,7 @@ const Wrapper = styled('div')`
 `
 
 const Content = styled('div')`
-  padding: 1em 30px;
+  padding: 1.5em 60px;
   width: 95%;
   max-height: 100vh;
   overflow: auto;
@@ -41,18 +41,11 @@ export default ({ children }) => {
           <Helmet>
             <meta charSet="utf-8" />
             <title>Frank Condezo</title>
-            <link
-              href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,700"
-              rel="stylesheet"
-            />
           </Helmet>
           <Global
             styles={css`
               html {
                 overflow: inherit;
-              }
-              body {
-                font-family: 'Dosis', sans-serif;
               }
             `}
           />
