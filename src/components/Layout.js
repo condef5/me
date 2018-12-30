@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, Link, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
 import styled from '@emotion/styled'
@@ -15,31 +16,50 @@ const Content = styled('div')`
   width: 95%;
   max-height: 100vh;
   overflow: auto;
+  &.home {
+    background: linear-gradient(rgb(11, 12, 26), rgb(19, 20, 22));
+    transition: all 0.3s;
+    color: #fff;
+  }
 `
 
-export default ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
+export default ({ children }) => {
+  const color = location.pathname === '/' ? 'home' : ''
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <Wrapper>
-        <Global
-          styles={css`
-            html {
-              overflow: inherit;
-            }
-          `}
-        />
-        <Sidebar name={data.site.siteMetadata.title} />
-        <Content>{children}</Content>
-      </Wrapper>
-    )}
-  />
-)
+      `}
+      render={data => (
+        <Wrapper>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Frank Condezo</title>
+            <link
+              href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,700"
+              rel="stylesheet"
+            />
+          </Helmet>
+          <Global
+            styles={css`
+              html {
+                overflow: inherit;
+              }
+              body {
+                font-family: 'Dosis', sans-serif;
+              }
+            `}
+          />
+          <Sidebar name={data.site.siteMetadata.title} />
+          <Content className={color}>{children}</Content>
+        </Wrapper>
+      )}
+    />
+  )
+}
