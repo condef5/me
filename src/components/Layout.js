@@ -24,7 +24,11 @@ const Content = styled('div')`
 `
 
 export default ({ children }) => {
-  const color = location.pathname === '/' ? 'home' : ''
+  let color = 'home'
+  if (typeof window !== `undefined`) {
+    color = window.location.pathname === '/' ? 'home' : ''
+  }
+
   return (
     <StaticQuery
       query={graphql`
