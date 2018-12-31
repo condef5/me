@@ -35,7 +35,7 @@ const Sidebar = styled('div')`
     flex-direction: column;
     min-width: 70px;
     width: 5%;
-    animation: ${fil} 10s ease infinite;
+    animation: ${fil} 30s ease infinite;
   }
   a {
     /* min-width: 70px; */
