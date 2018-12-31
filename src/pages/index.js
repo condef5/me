@@ -1,8 +1,26 @@
 import React from 'react'
-import { css } from '@emotion/core'
+import { css, keyframes } from '@emotion/core'
 import Layout from '../components/Layout'
 import Me from '../components/Me'
 import styled from '@emotion/styled'
+
+const fil = keyframes`
+  20% {
+    filter: saturate(4);
+  }
+  40% {
+    filter: brightness(2);
+  }
+  60% {
+    filter: invert(1.1);
+  }
+  80% {
+    filter: invert(1.8);
+  }
+  100% {
+    filter: brightness(1);
+  }
+`
 
 const Wrap = styled('div')`
   margin: auto;
@@ -32,6 +50,12 @@ const Wrap = styled('div')`
     font-weight: 700;
   }
   height: 100%;
+  img {
+    animation: ${fil} 6s ease infinite;
+    &:hover {
+      filter: none;
+    }
+  }
 `
 
 export default () => {

@@ -1,6 +1,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
+import { keyframes } from '@emotion/core'
+
+const fil = keyframes`
+  20% {
+    background-position: 20%;
+  }
+  40% {
+    background-position: 40%;
+  }
+  60% {
+    background-position: 60%;
+  }
+  80% {
+    background-position: 80%;
+  }
+  100% {
+    background-position: 100%;
+  }
+`
 
 const Sidebar = styled('div')`
   background-size: cover;
@@ -16,6 +35,7 @@ const Sidebar = styled('div')`
     flex-direction: column;
     min-width: 70px;
     width: 5%;
+    animation: ${fil} 10s ease infinite;
   }
   a {
     /* min-width: 70px; */
