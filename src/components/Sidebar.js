@@ -24,7 +24,7 @@ const fil = keyframes`
 const Sidebar = styled('div')`
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('bg.png');
+  background-image: url('/bg.png');
   align-items: center;
   color: #fff;
   display: flex;

@@ -56,6 +56,23 @@ export default ({ children }) => {
               html {
                 overflow: inherit;
               }
+              blockquote {
+                background-color: #f6f8fa;
+                padding: 10px;
+                margin-left: 0px;
+                margin-right: 15px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                border-color: #d1caad;
+                border-left-width: 5px;
+                border-left-style: solid;
+                color: #06363c;
+              }
+              code {
+                background-color: #f6f8fa;
+                border-radius: 3px;
+                padding: 3px 5px;
+              }
             `}
           />
           <Sidebar name={data.site.siteMetadata.title} />
