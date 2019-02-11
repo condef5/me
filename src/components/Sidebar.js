@@ -54,9 +54,9 @@ const Sidebar = styled('div')`
 export default () => (
   <Sidebar>
     <Link to="/">Home</Link>
-    <Link to="/anime">Anime</Link>
-    <Link to="/life">Life</Link>
-    <Link to="/music">Music</Link>
-    <Link to="/years">Years</Link>
+    <Link to="#">Portfolio</Link>
+    <Link to="#">Blog</Link>
+    <Link to="#">Anime</Link>
+    <Link to="#">Music</Link>
   </Sidebar>
 )

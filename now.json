@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "blog-condef5",
-  "alias": "frankcondezo.now.sh",
+  "alias": "fcondezo.now.sh",
   "builds": [
     {
       "src": "package.json",
